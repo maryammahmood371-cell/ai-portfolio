@@ -1,65 +1,179 @@
+"use client";
 import Image from "next/image";
+import Link from "next/link";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import FadeIn from "@/components/FadeIn";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <Navbar />
+
+      <main className="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white">
+
+        <section className="max-w-7xl mx-auto px-8 py-24">
+
+          <div className="grid lg:grid-cols-2 items-center gap-16">
+
+            {/* LEFT */}
+<FadeIn>
+            <div>
+
+              <p className="text-cyan-400 font-semibold text-lg mb-4">
+                👋 Hello, I'm
+              </p>
+
+              <h1 className="text-6xl lg:text-7xl font-extrabold leading-tight bg-gradient-to-r from-cyan-400 via-sky-400 to-violet-500 bg-clip-text text-transparent">
+                Maryam Mahmood
+              </h1>
+
+              <h2 className="mt-6 text-3xl font-bold text-white">
+                AI & Machine Learning Student
+              </h2>
+
+              <p className="mt-8 text-lg text-slate-300 leading-9">
+                Passionate about Artificial Intelligence, Machine Learning,
+                Data Science, and modern web development.
+                I enjoy building intelligent applications,
+                analyzing data, and creating solutions that solve
+                real-world problems.
+              </p>
+              </div>
+              </FadeIn>
+
+              {/* Buttons */}
+
+              <div className="flex gap-5 mt-10 flex-wrap">
+
+                <Link
+                  href="/projects"
+                  className="px-8 py-4 rounded-xl bg-cyan-500 text-slate-950 font-bold hover:bg-cyan-400 transition duration-300"
+                >
+                  🚀 View Projects
+                </Link>
+
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 py-4 rounded-xl border-2 border-cyan-400 text-cyan-300 font-bold hover:bg-cyan-400 hover:text-slate-950 transition duration-300"
+                >
+                  📄 Download Resume
+                </a>
+
+              </div>
+
+              {/* Tech Badges */}
+
+              <div className="flex flex-wrap gap-4 mt-12">
+
+                <span className="px-5 py-2 rounded-full bg-cyan-500/20 border border-cyan-400 text-cyan-300">
+                  🤖 Artificial Intelligence
+                </span>
+
+                <span className="px-5 py-2 rounded-full bg-violet-500/20 border border-violet-400 text-violet-300">
+                  🧠 Machine Learning
+                </span>
+
+                <span className="px-5 py-2 rounded-full bg-sky-500/20 border border-sky-400 text-sky-300">
+                  💻 Next.js
+                </span>
+
+                <span className="px-5 py-2 rounded-full bg-emerald-500/20 border border-emerald-400 text-emerald-300">
+                  🐍 Python
+                </span>
+
+              </div>
+
+              {/* Stats */}
+
+                          <div className="grid grid-cols-2 gap-6 mt-16">
+
+                                  <div className="bg-slate-900 rounded-2xl border border-slate-700 p-6">
+
+                         <h3 className="text-4xl font-bold text-cyan-400">
+      5+
+    </h3>
+
+    <p className="text-slate-400 mt-2">
+      AI Projects
+    </p>
+
+  </div>
+
+  <div className="bg-slate-900 rounded-2xl border border-slate-700 p-6">
+
+    <h3 className="text-4xl font-bold text-violet-400">
+      1
+    </h3>
+
+    <p className="text-slate-400 mt-2">
+      AI Internship
+    </p>
+
+  </div>
+
+</div>
+
+{/* Call To Action */}
+
+<section className="mt-24">
+
+  <div className="bg-slate-900 border border-slate-700 rounded-3xl p-10 text-center">
+
+    <h2 className="text-4xl font-bold mb-6">
+      Let's Build Something Amazing Together 🚀
+    </h2>
+
+    <p className="text-gray-400 max-w-2xl mx-auto mb-8 text-lg">
+      I'm passionate about Artificial Intelligence, Machine Learning,
+      Python, and modern web development. I'm always learning new
+      technologies and looking for opportunities to work on exciting
+      AI projects.
+    </p>
+
+    <Link
+      href="/contact"
+      className="inline-block px-8 py-4 rounded-xl bg-cyan-500 text-black font-bold hover:bg-cyan-400 transition"
+    >
+      Contact Me
+    </Link>
+
+  </div>
+
+</section>
+
+            {/* RIGHT */}
+<FadeIn delay={0.3}>
+            <div className="flex justify-center">
+
+              <div className="relative">
+
+                <div className="absolute -inset-8 rounded-full bg-gradient-to-r from-cyan-500 via-violet-500 to-cyan-500 blur-3xl opacity-30 animate-pulse"></div>
+
+                <Image
+                  src="/images/avatar.png"
+                  alt="Maryam Mahmood"
+                  width={500}
+                  height={500}
+                  priority
+                  className="relative rounded-full drop-shadow-[0_0_60px_rgba(34,211,238,0.4)] hover:scale-105 transition duration-500"
+                />
+
+              </div>
+
+            </div>
+</FadeIn>
+          </div>
+
+        </section>
+
       </main>
-    </div>
+
+      {/* Footer */}
+      <Footer />
+
+    </>
   );
 }
