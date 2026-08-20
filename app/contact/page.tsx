@@ -109,40 +109,50 @@ export default function Contact() {
                 Send Me a Message
               </h2>
 
-              <form className="space-y-6">
+              <form
+  action="https://formspree.io/f/myegozvo"
+  method="POST"
+  className="space-y-6"
+>
+  <input
+    type="text"
+    name="name"
+    placeholder="Your Name"
+    required
+    className="w-full p-4 rounded-xl bg-slate-800 border border-slate-600 focus:border-cyan-400 outline-none"
+  />
 
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  className="w-full p-4 rounded-xl bg-slate-800 border border-slate-600 focus:border-cyan-400 outline-none"
-                />
+  <input
+    type="email"
+    name="email"
+    placeholder="Your Email"
+    required
+    className="w-full p-4 rounded-xl bg-slate-800 border border-slate-600 focus:border-cyan-400 outline-none"
+  />
 
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className="w-full p-4 rounded-xl bg-slate-800 border border-slate-600 focus:border-cyan-400 outline-none"
-                />
+  <input
+    type="text"
+    name="subject"
+    placeholder="Subject"
+    required
+    className="w-full p-4 rounded-xl bg-slate-800 border border-slate-600 focus:border-cyan-400 outline-none"
+  />
 
-                <input
-                  type="text"
-                  placeholder="Subject"
-                  className="w-full p-4 rounded-xl bg-slate-800 border border-slate-600 focus:border-cyan-400 outline-none"
-                />
+  <textarea
+    name="message"
+    rows={6}
+    placeholder="Write your message..."
+    required
+    className="w-full p-4 rounded-xl bg-slate-800 border border-slate-600 focus:border-cyan-400 outline-none"
+  />
 
-                <textarea
-                  rows={6}
-                  placeholder="Write your message..."
-                  className="w-full p-4 rounded-xl bg-slate-800 border border-slate-600 focus:border-cyan-400 outline-none"
-                />
-
-                <button
-                  type="submit"
-                  className="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-violet-500 text-black font-bold hover:scale-105 transition"
-                >
-                  Send Message
-                </button>
-
-              </form>
+  <button
+    type="submit"
+    className="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-violet-500 text-black font-bold hover:scale-105 transition"
+  >
+    Send Message
+  </button>
+</form>
 
             </div>
 
